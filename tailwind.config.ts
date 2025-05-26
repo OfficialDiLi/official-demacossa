@@ -30,10 +30,12 @@ export default {
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--accent-color))',
-					foreground: 'hsl(var(--accent-foreground))'
+					DEFAULT: 'hsl(var(--secondary))', // Mapped to accent-color (Rich Gold)
+					foreground: 'hsl(var(--secondary-foreground))'
 				},
-				accent_color: 'hsl(var(--accent-color))',
+				// This was a custom name, now maps to the new accent-color (Rich Gold)
+				// It can be used directly if preferred over 'secondary' or 'accent' for specific cases.
+				accent_color: 'hsl(var(--accent-color))', 
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -42,8 +44,8 @@ export default {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
 				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
+				accent: { // shadcn 'accent' component color
+					DEFAULT: 'hsl(var(--accent))', // Mapped to accent-color (Rich Gold)
 					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
@@ -54,10 +56,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				'deep-purple': '#3D246C',
-				'bright-gold': '#F4B400',
-				'soft-cream': '#F3ECE3',
-				'dark-navy': '#1F1F2E',
+				// Updated and new custom color names based on the palette
+				'royal-purple': 'hsl(var(--primary))', // Was 'deep-purple'
+				'rich-gold': 'hsl(var(--accent-color))',    // Was 'bright-gold'
+				'soft-cream': 'hsl(var(--background))',
+				'dark-navy': 'hsl(var(--foreground))',
+				'forest-green': 'hsl(var(--forest-green))', // New color
+				// Sidebar colors are kept as is, using their own specific CSS variables
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -103,7 +108,7 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out forwards' // Added 'forwards' here
+				'fade-in': 'fade-in 0.5s ease-out forwards'
 			}
 		}
 	},

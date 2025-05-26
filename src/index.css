@@ -5,47 +5,47 @@
 
 @layer base {
   :root {
-    /* DEMACOSSA Theme Colors */
-    --background: 26 47% 95%; /* soft-cream: #F3ECE3 */
-    --foreground: 240 19% 15%; /* dark-navy: #1F1F2E */
+    /* DEMACOSSA New Theme Colors */
+    --background: 26 47% 95%; /* soft-cream: #F3ECE3 (Soft Cream / Beige) */
+    --foreground: 240 19% 15%; /* dark-navy: #1F1F2E (Elegant Navy) */
 
-    --primary: 265 46% 28%; /* deep-purple: #3D246C */
-    --primary-foreground: 0 0% 100%; /* White for text on deep-purple */
+    --primary: 258 39% 28%; /* royal-purple: #3E2B64 (Royal Purple) */
+    --primary-foreground: 0 0% 100%; /* White for text on royal-purple */
 
-    --accent-color: 40 100% 48%; /* bright-gold: #F4B400 */
-    --accent-foreground: 240 19% 15%; /* dark-navy for text on bright-gold */
+    --accent-color: 41 60% 57%; /* rich-gold: #D4A650 (Rich Gold) */
+    --accent-foreground: 240 19% 15%; /* dark-navy for text on rich-gold */
 
-    /* Standard shadcn variables - you can adjust these if needed,
-       but the primary DEMACOSSA theme is set above.
-       These are mostly for shadcn components to fall back to.
-       We'll try to use DEMACOSSA colors directly for custom components.
-    */
-    --card: 26 47% 95%; /* soft-cream */
-    --card-foreground: 240 19% 15%; /* dark-navy */
+    --forest-green: 120 39% 49%; /* forest-green: #4CAF50 */
+    --forest-green-foreground: 240 19% 15%; /* dark-navy for text on forest-green */
 
-    --popover: 26 47% 95%; /* soft-cream */
-    --popover-foreground: 240 19% 15%; /* dark-navy */
+    /* Standard shadcn variables mapped to the new theme */
+    --card: var(--background); /* soft-cream */
+    --card-foreground: var(--foreground); /* dark-navy */
 
-    /* Secondary (shadcn naming) - can map to accent or a lighter primary */
-    --secondary: 265 46% 40%; /* Lighter Deep Purple or a complementary color */
-    --secondary-foreground: 0 0% 100%;
+    --popover: var(--background); /* soft-cream */
+    --popover-foreground: var(--foreground); /* dark-navy */
 
-    --muted: 210 40% 96.1%; /* Default muted */
+    /* Secondary (shadcn naming) - mapped to Rich Gold */
+    --secondary: var(--accent-color); /* rich-gold */
+    --secondary-foreground: var(--accent-foreground); /* dark-navy */
+
+    --muted: 210 40% 96.1%; /* Default muted - can be adjusted if needed */
     --muted-foreground: 215.4 16.3% 46.9%; /* Default muted-foreground */
 
-    --accent: 40 100% 48%; /* bright-gold, for shadcn specific accent styling */
-    --accent-foreground: 240 19% 15%; /* dark-navy */
+    /* Accent (shadcn naming) - mapped to Rich Gold */
+    --accent: var(--accent-color); /* rich-gold */
+    --accent-foreground: var(--accent-foreground); /* dark-navy */
 
     --destructive: 0 84.2% 60.2%; /* Default destructive */
     --destructive-foreground: 210 40% 98%;
 
-    --border: 265 20% 80%; /* A border derived from primary or background */
-    --input: 265 20% 85%; /* Input field background */
-    --ring: 40 100% 48%; /* bright-gold for focus rings */
+    --border: 258 20% 80%; /* Border derived from Royal Purple (lighter shade) */
+    --input: 258 20% 85%; /* Input field background, derived from Royal Purple (lighter shade) */
+    --ring: var(--accent-color); /* Rich Gold for focus rings */
 
     --radius: 0.5rem;
 
-    /* Sidebar specific colors - using defaults for now, can be customized */
+    /* Sidebar specific colors - keeping existing, can be updated later if needed */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -56,38 +56,40 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  /* Minimal dark mode - not fully implemented as per request, but structure is here */
   .dark {
     --background: 240 19% 15%; /* dark-navy */
     --foreground: 26 47% 95%; /* soft-cream */
 
-    --primary: 265 46% 40%; /* Lighter Deep Purple */
-    --primary-foreground: 0 0% 100%;
+    --primary: 258 39% 40%; /* Lighter Royal Purple for dark mode */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --accent-color: 40 100% 55%; /* Slightly brighter gold for dark mode */
-    --accent-foreground: 240 19% 15%;
+    --accent-color: 41 60% 65%; /* Brighter Rich Gold for dark mode */
+    --accent-foreground: 240 19% 15%; /* dark-navy on Brighter Rich Gold */
+    
+    --forest-green: 120 39% 55%; /* Lighter Forest Green for dark mode */
+    --forest-green-foreground: 240 19% 15%; /* dark-navy on Lighter Forest Green */
 
     --card: 240 19% 20%; /* Darker card background */
-    --card-foreground: 26 47% 95%;
+    --card-foreground: var(--foreground); /* soft-cream */
 
-    --popover: 240 19% 20%;
-    --popover-foreground: 26 47% 95%;
+    --popover: 240 19% 20%; /* Darker popover background */
+    --popover-foreground: var(--foreground); /* soft-cream */
     
-    --secondary: 265 46% 30%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: var(--accent-color); /* Brighter Rich Gold */
+    --secondary-foreground: var(--accent-foreground); /* dark-navy */
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 40 100% 55%;
-    --accent-foreground: 240 19% 15%;
+    --accent: var(--accent-color); /* Brighter Rich Gold */
+    --accent-foreground: var(--accent-foreground); /* dark-navy */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 265 30% 30%;
-    --input: 265 30% 25%;
-    --ring: 40 100% 55%;
+    --border: 258 30% 30%; /* Darker border derived from Royal Purple */
+    --input: 258 30% 25%; /* Darker input background */
+    --ring: var(--accent-color); /* Brighter Rich Gold */
   }
 }
 
@@ -97,7 +99,7 @@
   }
 
   body {
-    @apply bg-soft-cream text-dark-navy font-sans;
+    @apply bg-background text-foreground font-sans; /* Updated to use --background and --foreground */
   }
 
   h1, h2, h3, h4, h5, h6 {
