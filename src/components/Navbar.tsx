@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, BookOpen, Users, CalendarDays, MessageSquare, Home, Info, Briefcase, Award, FileText, UserCircle } from 'lucide-react';
@@ -17,12 +16,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-deep-purple text-primary-foreground shadow-lg sticky top-0 z-50">
+    <nav className="bg-primary text-primary-foreground shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <span className="font-poppins font-bold text-2xl text-bright-gold hover:text-white transition-colors">
+            <Link to="/" className="flex items-center flex-shrink-0">
+              <img src="/lovable-uploads/8bb1429c-4875-49fc-80bb-aad4ea71b4ea.png" alt="DEMACOSSA Logo" className="h-12 mr-3" />
+              <span className="font-poppins font-bold text-2xl text-rich-gold hover:text-white transition-colors">
                 DEMACOSSA
               </span>
             </Link>
@@ -33,14 +33,14 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="hover:bg-primary-foreground hover:text-deep-purple px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="hover:bg-primary-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item.name}
                 </Link>
               ))}
               <Button
                 variant="outline"
-                className="text-deep-purple bg-bright-gold hover:bg-yellow-500 hover:text-deep-purple border-bright-gold"
+                className="text-primary bg-rich-gold hover:bg-rich-gold/90 hover:text-primary border-rich-gold"
                 asChild
               >
                 <Link to="/member-portal">Member Portal</Link>
@@ -52,7 +52,7 @@ const Navbar = () => {
               variant="outline"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-bright-gold border-bright-gold hover:bg-bright-gold hover:text-deep-purple"
+              className="text-rich-gold border-rich-gold hover:bg-rich-gold hover:text-primary"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
@@ -62,21 +62,21 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-deep-purple">
+        <div className="md:hidden bg-primary">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className="hover:bg-primary-foreground hover:text-deep-purple block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="hover:bg-primary-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition-colors"
               >
                 {item.name}
               </Link>
             ))}
              <Button
                 variant="default"
-                className="w-full text-deep-purple bg-bright-gold hover:bg-yellow-500 mt-2"
+                className="w-full text-primary bg-rich-gold hover:bg-rich-gold/90 mt-2"
                 asChild
               >
                 <Link to="/member-portal" onClick={() => setIsOpen(false)}>Member Portal</Link>
