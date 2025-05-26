@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner"; // Assuming Sonner is used for different toast styles/positions
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, ScrollRestoration } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // Removed ScrollRestoration
 
 import Index from "./pages/Index";
 import AboutPage from "./pages/AboutPage";
@@ -25,7 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollRestoration />
+        {/* <ScrollRestoration /> Removed this line */}
         <div className="flex flex-col min-h-screen bg-soft-cream">
           <Navbar />
           <main className="flex-grow">
@@ -49,3 +49,4 @@ const App = () => (
 );
 
 export default App;
+
