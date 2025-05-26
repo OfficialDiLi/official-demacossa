@@ -1,92 +1,93 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* DEMACOSSA Theme Colors */
+    --background: 26 47% 95%; /* soft-cream: #F3ECE3 */
+    --foreground: 240 19% 15%; /* dark-navy: #1F1F2E */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --primary: 265 46% 28%; /* deep-purple: #3D246C */
+    --primary-foreground: 0 0% 100%; /* White for text on deep-purple */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --accent-color: 40 100% 48%; /* bright-gold: #F4B400 */
+    --accent-foreground: 240 19% 15%; /* dark-navy for text on bright-gold */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Standard shadcn variables - you can adjust these if needed,
+       but the primary DEMACOSSA theme is set above.
+       These are mostly for shadcn components to fall back to.
+       We'll try to use DEMACOSSA colors directly for custom components.
+    */
+    --card: 26 47% 95%; /* soft-cream */
+    --card-foreground: 240 19% 15%; /* dark-navy */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --popover: 26 47% 95%; /* soft-cream */
+    --popover-foreground: 240 19% 15%; /* dark-navy */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Secondary (shadcn naming) - can map to accent or a lighter primary */
+    --secondary: 265 46% 40%; /* Lighter Deep Purple or a complementary color */
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%; /* Default muted */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Default muted-foreground */
 
-    --destructive: 0 84.2% 60.2%;
+    --accent: 40 100% 48%; /* bright-gold, for shadcn specific accent styling */
+    --accent-foreground: 240 19% 15%; /* dark-navy */
+
+    --destructive: 0 84.2% 60.2%; /* Default destructive */
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 265 20% 80%; /* A border derived from primary or background */
+    --input: 265 20% 85%; /* Input field background */
+    --ring: 40 100% 48%; /* bright-gold for focus rings */
 
     --radius: 0.5rem;
 
+    /* Sidebar specific colors - using defaults for now, can be customized */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Minimal dark mode - not fully implemented as per request, but structure is here */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 240 19% 15%; /* dark-navy */
+    --foreground: 26 47% 95%; /* soft-cream */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --primary: 265 46% 40%; /* Lighter Deep Purple */
+    --primary-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --accent-color: 40 100% 55%; /* Slightly brighter gold for dark mode */
+    --accent-foreground: 240 19% 15%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --card: 240 19% 20%; /* Darker card background */
+    --card-foreground: 26 47% 95%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --popover: 240 19% 20%;
+    --popover-foreground: 26 47% 95%;
+    
+    --secondary: 265 46% 30%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 40 100% 55%;
+    --accent-foreground: 240 19% 15%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 265 30% 30%;
+    --input: 265 30% 25%;
+    --ring: 40 100% 55%;
   }
 }
 
@@ -96,6 +97,10 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-soft-cream text-dark-navy font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
   }
 }
