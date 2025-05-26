@@ -1,8 +1,15 @@
 
 import React from 'react';
 import { Briefcase, Users, Search, MessageSquare } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
-const ProgramCard = ({ title, description, icon: Icon }) => (
+interface ProgramCardProps {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+const ProgramCard = ({ title, description, icon: Icon }: ProgramCardProps) => (
   <div className="bg-white shadow-xl rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300">
     <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-bright-gold text-deep-purple">
       <Icon size={32} />

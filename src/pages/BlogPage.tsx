@@ -3,7 +3,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-const BlogPostCard = ({ title, excerpt, date, author, slug }) => (
+interface BlogPostProps {
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  slug: string;
+}
+
+const BlogPostCard = ({ title, excerpt, date, author, slug }: BlogPostProps) => (
   <div className="bg-white shadow-xl rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300">
     <h3 className="text-2xl font-semibold text-deep-purple mb-2">{title}</h3>
     <p className="text-sm text-gray-600 mb-3">By {author} on {date}</p>

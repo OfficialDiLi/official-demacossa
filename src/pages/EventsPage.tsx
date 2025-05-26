@@ -3,7 +3,15 @@ import React from 'react';
 import { CalendarDays, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const EventCard = ({ title, date, time, location, description }) => (
+interface EventCardProps {
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  description: string;
+}
+
+const EventCard = ({ title, date, time, location, description }: EventCardProps) => (
   <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
     <div>
       <h3 className="text-2xl font-semibold text-deep-purple mb-3">{title}</h3>
@@ -42,7 +50,6 @@ const EventsPage = () => {
           <EventCard key={index} {...event} />
         ))}
       </div>
-      {/* Placeholder for past events or calendar view */}
     </div>
   );
 };

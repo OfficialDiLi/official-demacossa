@@ -2,8 +2,17 @@
 import React from 'react';
 import { Download, FileText, Briefcase, Link as LinkIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LucideIcon } from 'lucide-react';
 
-const ResourceItem = ({ title, description, type, link, icon: Icon }) => (
+interface ResourceItemProps {
+  title: string;
+  description: string;
+  type: string;
+  link: string;
+  icon: LucideIcon;
+}
+
+const ResourceItem = ({ title, description, type, link, icon: Icon }: ResourceItemProps) => (
   <div className="bg-white shadow-xl rounded-lg p-6 flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
     <div>
       <div className="flex items-center mb-3">
