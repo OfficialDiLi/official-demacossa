@@ -1,18 +1,13 @@
-# Welcome to your Lovable project
+# Welcome to Official BOSU DEMACOSSA WEBSITE 
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/b618c76b-4fb2-4690-bc34-dd43bbbbea99
 
-## How can I edit this code?
+## How can I Contribute this code?
 
-There are several ways of editing your application.
+There are several ways of Contributing to our application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/b618c76b-4fb2-4690-bc34-dd43bbbbea99) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
