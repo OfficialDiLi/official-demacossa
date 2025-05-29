@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm"> {/* border-gray-700 can be changed to border-border for theme consistency if needed */}
           <p>&copy; {currentYear} DEMACOSSA. All rights reserved.</p>
-          <p>Designed with <span className="text-rich-gold">&hearts;</span> by Lovable</p>
+          <p>Designed with <span className="text-rich-gold">&hearts;</span> by DiLi</p>
         </div>
       </div>
     </footer>
