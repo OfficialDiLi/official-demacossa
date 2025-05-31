@@ -1,9 +1,9 @@
-
 import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner"; // Assuming Sonner is used for different toast styles/positions
+import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom"; // Removed ScrollRestoration
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
 
 import Index from "./pages/Index";
 import AboutPage from "./pages/AboutPage";
@@ -24,8 +24,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <Analytics />
       <BrowserRouter>
-        {/* <ScrollRestoration /> Removed this line */}
         <div className="flex flex-col min-h-screen bg-soft-cream">
           <Navbar />
           <main className="flex-grow">
@@ -37,7 +37,6 @@ const App = () => (
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/resources" element={<ResourcesPage />} />
               <Route path="/member-portal" element={<MemberPortalPage />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
@@ -49,4 +48,3 @@ const App = () => (
 );
 
 export default App;
-
