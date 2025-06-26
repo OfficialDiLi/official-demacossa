@@ -15,7 +15,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-poppins font-extrabold mb-6 opacity-0 animate-fade-in leading-tight">
-            Welcome to <span className="text-rich-gold">Official BOSU's DEMACOSSA Space 🚀</span>
+            Welcome to <span className="text-rich-gold">Official DEMACOSSA</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Your central portal for academic excellence, innovation, and community in Mathematics & Computer Science.
