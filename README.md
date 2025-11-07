@@ -1,4 +1,4 @@
-# Welcome to Official BOSU DEMACOSSA WEBSITE 
+# Welcome to Official K.I.U DEMACOSSA WEBSITE 
 
 ## Project info
 
